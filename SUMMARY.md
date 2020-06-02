@@ -5,7 +5,7 @@
 * [Part2 模拟商城](two_shop/README.md)
     * [订单支付流程](two_shop/payflow.md)
     * [go 语言环境安装](two_shop/goinstall.md)
-    * [包管理工具 go mod](two_shop/gomod.md)
+    * [包管理工具](two_shop/gomod.md)
     * [实现http服务](two_shop/http.md)
     * [http静态资源服务器](two_shop/http静态资源服务器.md)
     * [mysql表设计](two_shop/mysql表设计.md)
