@@ -26,6 +26,10 @@ go module是go1.11版本才开始推出的，相比于godep 和 govendor更加�
 
 module 就是为了方便我们管理项目代码使用的，它是一个版本控制单元，是一系列相关包的集合表示。<br/>
 
+使用 go module 管理依赖后会在项目根目录下生成两个文件 go.mod 和 go.sum。
+go.mod 中会记录当前项目的所依赖, go.sum记录每个依赖库的版本和哈希值。
+
+
 #### 开启gomod可用
 可以使用环境变量GO111MODULE选择开启或者是关闭module模块的支持。有三个值可选:
 * GO111MODULE=off, 关闭module功能, 到GOPATH中寻找依赖
@@ -55,4 +59,4 @@ go mod init github.com/willierGo/payment
 | go mod verify   | 验证依赖是否正确               |
 | go mod graph    | 打印模块依赖图                 |
 | go mod download | 下载依赖包                     |
-| go mod version  | 将依赖复制到vendor下           |
+| go mod vendor  | 将依赖复制到vendor下           |
