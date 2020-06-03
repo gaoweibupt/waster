@@ -19,14 +19,6 @@ go module是go1.11版本才开始推出的，相比于godep 和 govendor更加�
 
 ### gomod
 
-go的程序会分门别类的组织成若干组文件，每组文件被称为一个包。<br/>
-
-每个go文件都属于且只能属于一个包，并且在源文件的第一行必须要使用 **package 包名**  来指名文件的包所属关系。<br/>
-
-go的代码组织就是通过定义这些不同的包来实现的。<br/>
-
-
-go的标准库代码在GOROOT/src下，而用户的代码都在GOPATH/src下；<br/>
 开发时所有的包都放在GOPATH/src下 很混乱，所以go 在go1.11之后的版本增加了go module的功能，简称 **gomod**。
 
 #### 什么是module？
