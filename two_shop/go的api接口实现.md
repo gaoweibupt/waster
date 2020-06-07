@@ -19,5 +19,44 @@ MVC模式是把程序分为以下三个部分：
 
 我们就按这个规则进行代码结构的设计。
 
-### json数据处理
+### 接口返回值标准化
+1. 固定格式的返回
+
+```
+type JsonReturn struct {
+	Code string `json:"code"`
+	Msg  string `json:"msg"`
+	Data string `json:"data"`
+}
+```
+
+2. json序列化方法
 go标准库 提供了json的处理包， encoding/json 
+
+### 页面请求提交
+
+```
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js" type="text/javascript"></script>
+
+```
+
+```
+    function submitForm(){
+       //.ajax提交form表单方法
+       $.ajax({  
+            type: "POST",  
+            url:"http://127.0.0.1:8080/api/order/create",  
+            data:$('#forms').serialize(),// 序列化表单值  
+            async: true,  
+            dataType : "json",
+            success: function(data) { 
+                if(data.code == 0) {
+                    alert(data.msg);
+                } else if (data.code != 0) {
+                    alert("提交失败");
+                }
+                //alert(data.msg);
+            }  
+        });
+    }
+```
