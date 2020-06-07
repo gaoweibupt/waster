@@ -53,6 +53,13 @@ mysql> CREATE TABLE `product_order` (
   `pay_amount` bigint(20) NOT NULL DEFAULT '0',
   `pay_status` tinyint(3) NOT NULL DEFAULT '0',
   `create_time` int(10) NOT NULL DEFAULT '0',
+  `update_time` int(10) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 ```
+
+两点注意:
+1.默认值为零值，不要用null； null值对于索引是无效的
+2.时间用时间戳表示:
+* 不用考虑时区问题
+* 计算方便，检索效率高

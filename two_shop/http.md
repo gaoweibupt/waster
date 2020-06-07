@@ -10,7 +10,9 @@ func main() {
 }
 
 func sayHello(w http.ResponseWriter, r *http.Request) {
-    w.Write([]byte("hello world"))}
+    w.Write([]byte("hello world"))
+}
+
 ```
 
 #### 实现原理

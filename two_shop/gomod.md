@@ -36,6 +36,13 @@ go.mod 中会记录当前项目的所依赖, go.sum记录每个依赖库的版�
 * GO111MODULE=on, 代码不会到GOPATH中去寻找
 * GO111MODULE=auto, go命令行根据当前目录来决定是否启用module, 当在GOPATH目录外且有go.mod文件时启用module
 
+
+因为go mod是从github上拉取代码，可以设置代理进行加速
+```
+export GOPROXY="https://mirrors.aliyun.com/goproxy/" 
+export GO111MODULE=on
+```
+
 #### 创建新项目
 
 创建项目文件夹
